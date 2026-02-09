@@ -78,7 +78,7 @@ print("Classes:", le.classes_)  # normal=1, attack=0 (or reverse)
 from sklearn.ensemble import RandomForestClassifier
 
 model = RandomForestClassifier(
-    n_estimators=300,
+    n_estimators=100,
     max_depth=20,
     min_samples_split=5,
     min_samples_leaf=2,
