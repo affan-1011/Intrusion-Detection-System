@@ -11,7 +11,7 @@ important_features = joblib.load("important_features.pkl")
 
 st.set_page_config(page_title="Intrusion Detection System", layout="centered")
 
-st.title("🛡️ Smart Intrusion Detection System")
+st.title(" Smart Intrusion Detection System")
 st.markdown("Detect whether network traffic is **Normal** or an **Attack** using machine learning.")
 
 st.markdown("---")
@@ -73,17 +73,17 @@ input_df = pd.DataFrame([input_data])
 
 import plotly.graph_objects as go
 
-if st.button("🚀 Detect Intrusion"):
+if st.button(" Detect Intrusion"):
 
     prediction = model.predict(input_df)[0]
     attack_probability = model.predict_proba(input_df)[0][0]  # 0 = Attack
 
-    st.subheader("🔍 Detection Result")
+    st.subheader(" Detection Result")
 
     if prediction == 1:
-        st.success("✅ Normal Traffic Detected")
+        st.success(" Normal Traffic Detected")
     else:
-        st.error("🚨 Attack Detected!")
+        st.error(" Attack Detected!")
 
     st.write(f"### Attack Probability: {attack_probability:.2%}")
 
